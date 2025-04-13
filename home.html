@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Path Analyser</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #6A0572, #AB83A1);
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      height: 120px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      width: 140px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .title {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 70px;
+      margin: 60px auto;
+      width: 90%;
+      max-width: 1400px;
+    }
+
+    .welcome {
+      font-size: 34px;
+      margin-bottom: 25px;
+      color: #ffffff;
+    }
+
+    .cheeky-message {
+      font-size: 24px;
+      margin-bottom: 35px;
+      font-style: italic;
+      font-weight: bold;
+      color: #E0BBE4;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      gap: 30px;
+    }
+
+    button {
+      padding: 18px 40px;
+      font-size: 20px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #9D50BB, #6E48AA);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #8B7AB8, #6658A6);
+    }
+
+    footer {
+      padding: 30px 20px;
+      font-size: 16px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.2);
+      margin-top: auto;
+    }
+
+    .contact-info {
+      margin-bottom: 20px;
+    }
+
+    .team {
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .button-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.ibb.co/JwT8MGL9/IMG-20250412-WA0046.jpg" alt="Path Analyser Logo" class="logo"/>
+    <div class="title">Path Analyser</div>
+  </header>
+
+  <div class="content-container">
+    <div class="welcome">Welcome to Path Analyser</div>
+
+    <div id="cheekyMessage" class="cheeky-message">
+      Choose your path below... 👇
+    </div>
+
+    <div class="button-container">
+      <button onclick="showCheekyMessage('MPC')" title="Choose MPC path">MPC</button>
+      <button onclick="showCheekyMessage('BPC')" title="Choose BPC path">BPC</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contact-info">
+      <strong>Contact Information:</strong><br>
+      <strong>📞</strong> +919533487178
+    </div>
+    <div class="team">
+      <strong>Team Members:</strong> Lahari, Devika, Sathvika, Keerthi <br>
+      <strong>©Tech Titans</strong><br>
+    </div>
+  </footer>
+
+  <script>
+   function showCheekyMessage(choice) {
+    // Save the user's choice
+    localStorage.setItem('selectedPath', choice);
+
+    const cheekyMessageElement = document.getElementById('cheekyMessage');
+    if (choice === 'MPC') {
+      cheekyMessageElement.innerHTML = "Ah, you’re a Ramanujan fan! You must be a genius at numbers! 🤓";
+    } else if (choice === 'BPC') {
+      cheekyMessageElement.innerHTML = "Not a fan of Maths, huh? You’re a rebel with a cause! 🧐";
+    }
+
+    setTimeout(function () {
+      window.location.href = 'hack.html'; // Go to login page
+    }, 1500);
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Path Analyser</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    body {
+     background: linear-gradient(135deg,#AB83A1, #6A0572);
+    }
+ </style>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+
+   <!-- Header -->
+   <header class="bg-white shadow p-4 flex items-center justify-between">
+    <img src="https://i.ibb.co/JwT8MGL9/IMG-20250412-WA0046.jpg" alt="Path Analyser Logo"
+         class="w-20 h-20 rounded-full object-cover border-4 border-blue-300 shadow-md" />
+    <h1 class="text-3xl font-bold text-gray-800 text-center flex-1">PATH ANALYSER</h1>
+    <div class="w-200"></div> <!-- Empty div to balance the layout -->
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-6 max-w-7xl mx-auto">
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-gray-700">BPC STREAM</h2>
+      <ul class="space-y-4">
+
+        <!-- MBBS Section -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('mbbs')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">MBBS</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="mbbs" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="au.html" class="text-blue-500 hover:underline">Andhra Medical College</a></li>
+            <li><a href="gitam.html" class="text-blue-500 hover:underline">GITAM Institute of Medical Sciences</a></li>
+            <li><a href="svims.html" class="text-blue-500 hover:underline">Sri Venkateswara Institute of Medical Sciences</a></li>
+            <li><a href="katuri.html" class="text-blue-500 hover:underline">Katuri Medical College and Hospital</a></li>
+          </ul>
+        </li>
+
+        <!-- BDS Section -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('bds')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">BDS</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="bds" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="king.html" class="text-blue-500 hover:underline">King George Hospital</a></li>
+            <li><a href="gitam.html" class="text-blue-500 hover:underline">Gitam Dental College and Hospital</a></li>
+            <li><a href="au.html" class="text-blue-500 hover:underline">Andhra Pradesh Dental College</a></li>
+            <li><a href="anits.html" class="text-blue-500 hover:underline">Anil Neerukonda Institute of Dental Sciences</a></li>
+          </ul>
+        </li>
+        
+        <!-- Agriculture & Horticulture -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('Agriculture & Horticulture')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">Agriculture & Horticulture</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="Agriculture & Horticulture" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="au.html" class="text-blue-500 hover:underline">Andhra Pradesh Agricultural University</a></li>
+            <li><a href="visakha.html" class="text-blue-500 hover:underline">Visakha Dairy Agricultural College</a></li>
+            <li><a href="gayatri.html  " class="text-blue-500 hover:underline"> Gayatri College of Agricultural Sciences  </a></li>
+            <li><a href="svims.html" class="text-blue-500 hover:underline">Sri Venkateswara Veterinary University</a></li>
+          </ul>
+        </li>
+
+        <!-- B.Pharmacy Section -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('bpharmacy')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">B.Pharmacy</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="bpharmacy" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="gitam.html" class="text-blue-500 hover:underline">GITAM School of Pharmacy</a></li>
+            <li><a href="au.html" class="text-blue-500 hover:underline">Andhra University College of Pharmaceutical Sciences</a></li>
+            <li><a href="raghu.html" class="text-blue-500 hover:underline">Raghu College of Pharmacy</a></li>
+            <li><a href="vignan.html" class="text-blue-500 hover:underline">Vignan Institute of Pharmaceutical Technology</a></li>
+          </ul>
+        </li>
+
+
+        <!-- Pharma D Section -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('pharmad')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">Pharma D</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="pharmad" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="gitam.html" class="text-blue-500 hover:underline">GITAM Institute of Pharmacy</a></li>
+            <li><a href="au.html" class="text-blue-500 hover:underline">Andhra University College of Pharmaceutical Sciences</a></li>
+            <li><a href="vignan.html" class="text-blue-500 hover:underline">Vignan Institute of Pharmaceutical Technology</a></li>
+            <li><a href="raghu.html" class="text-blue-500 hover:underline">Raghu College of Pharmacy</a></li>
+          </ul>
+        </li>
+
+        <!-- Paramedicine Section -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('paramedicine')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">Paramedicine</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="paramedicine" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="au.html" class="text-blue-500 hover:underline">Andhra University College of Nursing</a></li>
+            <li><a href="visakha.html" class="text-blue-500 hover:underline">Visakha College of Nursing</a></li>
+            <li><a href="gitam.html" class="text-blue-500 hover:underline">GITAM Institute of Nursing</a></li>
+
+          </ul>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center text-gray-600 py-4 shadow mt-10">
+    <p>© 2025 Path Analyser | Tech Titans</p>
+  
+  </footer>
+
+  <!-- Script for Toggle -->
+  <script>
+    function toggleColleges(id) {
+      const allLists = document.querySelectorAll('ul[id]');
+      allLists.forEach(list => {
+        if (list.id !== id) {
+          list.classList.add('hidden');
+        }
+      });
+      const element = document.getElementById(id);
+      element.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>

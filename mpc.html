@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Path Analyser - MPC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+     body {
+      background: linear-gradient(135deg,#AB83A1, #6A0572);
+     }
+  </style>
+</head>
+<body class="min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <img src="https://i.ibb.co/JwT8MGL9/IMG-20250412-WA0046.jpg" alt="Path Analyser Logo"
+         class="w-20 h-20 rounded-full object-cover border-4 border-blue-300 shadow-md" />
+    <h1 class="text-3xl font-bold text-gray-800 text-center flex-1">PATH ANALYSER</h1>
+    <div class="w-200"></div> <!-- Empty div to balance the layout -->
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-6 max-w-7xl mx-auto">
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-white-700">MPC STREAM</h2>
+            <ul class="space-y-4">
+
+        <!-- Engineering Colleges -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('engineering')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">Engineering (B.Tech)</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="engineering" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="aumpc.html" class="text-blue-600 hover:underline">ANDHRA UNIVERSITY</a>
+            <li><a href="viitmpc.html" class="text-blue-600 hover:underline">VIGNAN</a></li>
+            <li><a href="gitmpc.html" class="text-blue-600 hover:underline">GITAM</a></li>
+            <li><a href="anitsmpc.html" class="text-blue-600 hover:underline">ANITS</a></li>
+            <li><a href="gvpmpc.html" class="text-blue-600 hover:underline">GVP</a></li>
+            <li><a href="sanmpc.html" class="text-blue-600 hover:underline">SANKETIKA</a></li>
+            <li><a href="babampc.html" class="text-blue-600 hover:underline">BABA</a></li>
+            <li><a href="dadimpc.html" class="text-blue-600 hover:underline">DADI</a></li>
+            <li><a href="raghumpc.html" class="text-blue-600 hover:underline">RAGHU</a></li>
+            <li><a href="gitmpc.html" class="text-blue-600 hover:underline">GANDHI INSTITUTE OF TECHNOLOGY</a></li>
+            <li><a href="iimmpc.html" class="text-blue-600 hover:underline">IIM VISAKHAPATNAM</a></li>
+            <li><a href="pydahmpc.html" class="text-blue-600 hover:underline">PYDAH</a></li>
+            <li><a href="visakhampc.html" class="text-blue-600 hover:underline">VISAKHA</a></li>
+          </ul>
+        </li>
+
+        <!-- Degree Colleges -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('degree')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">Degree</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="degree" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="aumpc.html" class="text-blue-600 hover:underline">ANDHRA UNIVERSITY</a></li>
+            <li><a href="gitmpc.html" class="text-blue-600 hover:underline">GANDHI INSTITUTE</a></li>
+            <li><a href="krishnampc.html" class="text-blue-600 hover:underline">KRISHNA AVN</a></li>
+            <li><a href="chaitanyampc.html" class="text-blue-600 hover:underline">CHAITANYA</a></li>
+            <li><a href="anitsmpc.html" class="text-blue-600 hover:underline">ANITS</a></li>
+            <li><a href="aumpc.html" class="text-blue-600 hover:underline">AU</a></li>
+            <li><a href="adityampc.html" class="text-blue-600 hover:underline">ADITYA</a></li>
+          </ul>
+        </li>
+
+        <!-- Law -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('law')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">Law</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="law" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="abdmpc.html" class="text-blue-600 hover:underline">DR. B.R. AMBEDHKAR COLLEGE</a></li>
+            <li><a href="aumpc.html" class="text-blue-600 hover:underline">AU</a></li>
+            <li><a href="gitmpc.html" class="text-blue-600 hover:underline">GITAM</a></li>
+            <li><a href="nbmmpc.html" class="text-blue-600 hover:underline">N.B.M</a></li>
+            <li><a href="vlawmpc.html" class="text-blue-600 hover:underline">VISAKHA LAW COLLEGE</a></li>
+            <li><a href="saintsmpc.html" class="text-blue-600 hover:underline">ALL SAINTS LAW</a></li>
+          </ul>
+        </li>
+
+        <!-- Design -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('design')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">Design</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="design" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="jdmpc.html" class="text-blue-600 hover:underline">JD INSTITUTE</a></li>
+            <li><a href="visakhampc.html" class="text-blue-600 hover:underline">VISAKHA</a></li>
+            <li><a href="viftmpc.html" class="text-blue-600 hover:underline">VIFT</a></li>
+            <li><a href="gvpmpc.html" class="text-blue-600 hover:underline">GVP</a></li>
+            <li><a href="gitmpc.html" class="text-blue-600 hover:underline">GITAM</a></li>
+            <li><a href="sanmpc.html" class="text-blue-600 hover:underline">SANKETIKA</a></li>
+          </ul>
+        </li>
+
+        <!-- Social Sciences -->
+        <li class="bg-white p-4 shadow rounded-lg">
+          <button onclick="toggleColleges('social-sciences')" class="flex justify-between items-center w-full text-lg font-medium text-gray-800">
+            <span class="cursor-pointer">Social Sciences</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul id="social-sciences" class="hidden mt-2 space-y-2 text-base pl-4">
+            <li><a href="aumpc.html" class="text-blue-600 hover:underline">AU COLLEGE OF ARTS</a></li>
+            <li><a href="gitmpc.html" class="text-blue-600 hover:underline">GANDHI INSTITUTE</a></li>
+            <li><a href="krishnampc.html" class="text-blue-600 hover:underline">KRISHNA</a></li>
+            <li><a href="iimmpc.html" class="text-blue-600 hover:underline">IIM VISAKHAPATNAM</a></li>
+          </ul>
+        </li>
+
+         </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center text-gray-600 py-4 shadow mt-10">
+    <strong>© Tech Titans</strong>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function toggleColleges(id) {
+      const allLists = document.querySelectorAll('ul[id]');
+      allLists.forEach(list => {
+        if (list.id !== id) list.classList.add('hidden');
+      });
+      const element = document.getElementById(id);
+      element.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
